@@ -6,6 +6,7 @@ runs:
         - name: Install required dependencies
         # Solution to unstable Azure server access is to update apt-get
         # Found on: https://github.com/actions/runner-images/issues/675
+          shell: bash
           run: |
             sudo apt-get update
             sudo apt-get install -y -f libcurl4-openssl-dev libharfbuzz-dev libfribidi-dev libudunits2-dev libgdal-dev
